@@ -34,91 +34,17 @@ graph TD
     G -->|Pass| H[Deploy Ready]
 
 
-Tech Stack & Security Tools
-Category
-Tool
-Purpose
-Language
-Python 3.9
-Application Logic
-Framework
-Flask
-Web Server
-CI/CD
-GitHub Actions
-Orchestration
-SAST
-Semgrep
-Static Code Analysis
-SCA
-pip-audit
-Dependency Vulnerability Scan
-Container
-Trivy
-Image & OS Vulnerability Scan
-Containerization
-Docker
-Environment Consistency
-🚀 Pipeline Workflow
-The pipeline triggers on every push to the main branch.
-1. Static Application Security Testing (SAST)
-Scans source code for insecure patterns (e.g., hardcoded secrets, unsafe functions).
-yaml
-12
-2. Software Composition Analysis (SCA)
-Checks third-party libraries against known CVEs.
-yaml
-12
-3. Container Security
-Scans the built Docker image for OS-level vulnerabilities.
-yaml
-12
-📸 Pipeline Results
-❌ Failed Build (Security Gate Active)
+.
+├── .github/workflows/pipeline.yml   # CI/CD Configuration
+├── app.py                           # Flask Application
+├── Dockerfile                       # Container Configuration
+├── requirements.txt                 # Dependencies
+├── README.md                        # Documentation
+└── SECURITY.md                      # Security Policy
 
 
-When vulnerabilities are detected, the pipeline fails automatically to prevent deployment.
-✅ Successful Build
 
-
-Once vulnerabilities are remediated, the build passes and is marked ready for deployment.
-📂 Project Structure
-bash
-1234567
-🏃 Getting Started
-Prerequisites
-Python 3.9+
-Docker
-GitHub Account
-Local Installation
-Clone the repository:
-bash
-1
-Install dependencies:
-bash
-1
-Run locally:
-bash
-1
-Access at http://localhost:5000
-Run Security Scans Locally
-bash
-12345678
-🧠 Key Learnings & Challenges
-Hidden Files: Learned to manage .github hidden directories in Linux environments.
-Exit Codes: Configured tools to return exit code 1 on high-severity findings to enforce pipeline failure.
-False Positives: Tuned Semgrep rules to reduce noise while maintaining security coverage.
-Shift-Left: Realized that fixing a vulnerability in CI is 10x cheaper than in Production.
-🔮 Future Roadmap (AI Integration)
-Currently exploring AI-driven security automation.
-Integrate LLM-based vulnerability triage (using Ollama/Phi-3).
-Auto-remediation suggestions for developers.
-Deploy to AWS using Terraform (IaC Security).
-🤝 Contributing
-Security is a community effort. If you find a better way to configure these tools, please open a PR!
 📬 Connect With Me
 LinkedIn: Asad Ali
 Email: ashhadali2019@gmail.com
-Portfolio: [Link to Blog/Website if available]
-📄 License
-This project is licensed under the MIT License.
+Portfolio: GitHub Profile
