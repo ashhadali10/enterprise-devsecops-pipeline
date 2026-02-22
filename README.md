@@ -19,7 +19,6 @@ Traditional DevOps focuses on speed. DevSecOps focuses on **Secure Speed**. The 
 2.  **Enforce Gates:** Prevent vulnerable code from reaching production (Exit Code 1 on failure).
 3.  **Visibility:** Provide developers with immediate feedback on security issues.
 
-## 🏗 Architecture
 
 ```mermaid
 graph TD
